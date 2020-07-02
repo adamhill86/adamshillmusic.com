@@ -7,7 +7,7 @@
 
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 interface Props {
   description?: string;
@@ -28,7 +28,7 @@ const SEO: React.FC<Props> = ({ description = '', lang = 'en', meta = [], title 
           }
         }
       }
-    `,
+    `
   );
 
   const metaDescription = description || site.siteMetadata.description;
